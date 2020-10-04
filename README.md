@@ -1,30 +1,20 @@
-# Gruppe 2 startcode - Frontend
-
-## How to setup the project
-
-The project assumes that you have a backend setup with auth, test users aswell as the joke and scrape endpoints.
-Startcode for the backend can be found [here](https://github.com/Paepke-cph/TeamGoldStartCode-Backend)
-
-- Clone this repo
-- npm install
-- Change backend URL in settings.js - remember '/api'
+# DevOps frontend
 
 #### Sonarcloud settings
 
 Steps on sonarcloud.io
 
-- create new project
-- encrypt your token with travis(you can use docker for this if you don't want to install local. tip: pull ruby image) and add the token to travis.yml in project root
-- Add your new repo to be analyzed.
-- disable automatic analyze by sonarcloud.
+- Click on plus sign and choose 'Analyze new project'
+- Find your project, click and click again on 'Set Up'
+- Click on analyze with Github Actions
+- Add the sonarcloud tokens
+- Ignore the changes to the github actions to yml file
+- Edit the sonar-project.properties file locally and overwrite the following settings:
 
-Steps local
+1. sonar.projectKey
+2. sonar.organization
 
-- goto "sonar-project.properties"
-- sonar.projectKey=your_project_key
-- sonar.organization=the_organisation_you_imported_in_sonarcloud
-- sonar.pullrequest.github.repository=your_git_repo
-- You're golden...
+- you are done
 
 ### TEST
 
