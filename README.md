@@ -1,6 +1,19 @@
 # DevOps frontend
 
-#### Sonarcloud settings
+## Nyt repo
+
+1. lav et nyt github repository med start koden.
+2. Gå ind på settings/secrets
+3. Klik på 'New secret'
+4. indtast 'DOCKERHUB_IMAGENAME' under Name og sæt value til dit image navn og klik 'Add secret'
+5. gør dette for følgende 4 værdier:
+
+- Name = DOCKERHUB_TOKEN Value = Access Token som du har oprettet på dockerhub
+- Name = DOCKERHUB_USERNAME value = dit dockerhub brugernavn
+- Name = TEST_USER Value = test bruger navn
+- Name = TEST_PASSWORD Value = test bruger password
+
+## Sonarcloud settings
 
 Steps on sonarcloud.io
 
@@ -16,9 +29,12 @@ Steps on sonarcloud.io
 
 - you are done
 
-### TEST
+## Cypress testing
 
-_Cypress_
-
-- Provides UI testing for advanced state management
-- TODO add UI testing for the rest of the components
+1. Opret en 'cypress.env.json' i roden af repo'et
+2. Tilføj følgende til filen:
+   {
+   "TEST_USER": "CHANGEME",
+   "TEST_PASSWORD": "CHANGEME"
+   }
+3. Lav dine tests under cypress/e2e
